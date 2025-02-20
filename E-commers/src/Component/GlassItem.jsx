@@ -13,7 +13,7 @@ const CardData = [
   },
   {
     id: 2,
-    img: 'https://example.com/images/wayfarer.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/B/GBU228TR53_A.jpg',
     Name: 'Wayfarer Sunglasses',
     Price: '₹799',
     Disclamer: 'Iconic wayfarer style with a modern twist for everyday use.',
@@ -22,7 +22,7 @@ const CardData = [
   },
   {
     id: 3,
-    img: 'https://example.com/images/round-retro.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/B/GBU229BL53_A.jpg',
     Name: 'Round Retro Sunglasses',
     Price: '₹850',
     Disclamer: 'Vintage round sunglasses that combine retro charm with modern style.',
@@ -31,7 +31,7 @@ const CardData = [
   },
   {
     id: 4,
-    img: 'https://example.com/images/sport-wrap.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/B/GBU200BL51_a.jpg',
     Name: 'Sporty Wrap Sunglasses',
     Price: '₹950',
     Disclamer: 'Designed for an active lifestyle, these wrap sunglasses offer excellent UV protection.',
@@ -40,7 +40,7 @@ const CardData = [
   },
   {
     id: 5,
-    img: 'https://example.com/images/modern-square.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/B/GBU273BR52_A.jpg',
     Name: 'Modern Square Sunglasses',
     Price: '₹1000',
     Disclamer: 'Sleek and stylish square frames with a modern design and premium lenses.',
@@ -49,7 +49,7 @@ const CardData = [
   },
   {
     id: 6,
-    img: 'https://example.com/images/clubmaster.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/B/GBU230LG55_A.jpg',
     Name: 'Clubmaster Sunglasses',
     Price: '₹1200',
     Disclamer: 'A blend of classic and modern design, perfect for both casual and formal occasions.',
@@ -58,7 +58,7 @@ const CardData = [
   },
   {
     id: 7,
-    img: 'https://example.com/images/cat-eye.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/E/GEA279GR52_A.jpg',
     Name: 'Vintage Cat-Eye Sunglasses',
     Price: '₹1100',
     Disclamer: 'Elegant cat-eye frames that add a touch of glamour to any outfit.',
@@ -67,7 +67,7 @@ const CardData = [
   },
   {
     id: 8,
-    img: 'https://example.com/images/pilot.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/E/GEA284BU52_A.jpg',
     Name: 'Polarized Pilot Sunglasses',
     Price: '₹1300',
     Disclamer: 'High-performance polarized lenses with the classic pilot design.',
@@ -76,7 +76,7 @@ const CardData = [
   },
   {
     id: 9,
-    img: 'https://example.com/images/slim-rim.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/V/GVR171BR55_A.jpg',
     Name: 'Slim Rim Sunglasses',
     Price: '₹750',
     Disclamer: 'Minimalist slim rim design that provides a clean, modern look.',
@@ -85,7 +85,7 @@ const CardData = [
   },
   {
     id: 10,
-    img: 'https://example.com/images/oversized.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/V/GVR170GL63_A.jpg',
     Name: 'Oversized Fashion ',
     Price: '₹1400',
     Disclamer: 'Bold oversized frames that make a stylish statement for any occasion.',
@@ -94,7 +94,7 @@ const CardData = [
   },
   {
     id: 11,
-    img: 'https://example.com/images/foldable.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/E/GEA230MB54_A.jpg',
     Name: 'Foldable Travel Sunglasses',
     Price: '₹850',
     Disclamer: 'Convenient foldable design, ideal for travel and everyday use.',
@@ -103,7 +103,7 @@ const CardData = [
   },
   {
     id: 12,
-    img: 'https://example.com/images/luxury-designer.jpg',
+    img: 'https://www.gkboptical.com/media/catalog/product/cache/d8c10273a35b6dc0667ea18e2ce5e902/G/E/GEA279GR52_A.jpg',
     Name: 'Luxury Designer Sunglass',
     Price: '₹2000',
     Disclamer: 'Premium designer sunglasses crafted with high-quality materials.',
@@ -115,7 +115,7 @@ function GlassItem() {
   return (
     <div className='flex gap-10 flex-wrap justify-center items-center lg:justify-start ms-6 my-6'>
       {CardData.map((items) => {
-        return (<GlassICard CardData={items} />);
+        return (<GlassICard CardData={items} key={items.id} />);
 
       })}
     </div>
