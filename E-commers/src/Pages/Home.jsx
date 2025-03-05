@@ -9,13 +9,13 @@ import Order from '../Component/Order';
 function Home() {
   return (
     <div>
-      <Order/>
-      <Navebar/>
-      <Catogary/>
+      <Order />
+      <Navebar />
+      <Catogary />
       {/* <Slider/> */}
-      <GlassItem/>
+      <GlassItem />
     </div>
-    
+
   );
 }
 

@@ -8,9 +8,11 @@ import { useSelector } from 'react-redux';
 function Order() {
 
   const CardItem = useSelector((state) => state.card.card);
-  const [activeCard, setActiveCard] = useState(true);
+  const [activeCard, setActiveCard] = useState(false);
+  const itemQty = CardItem.reduce((itemQty, item) => itemQty + item.qty, 0)
+  const priceQty = CardItem.reduce((total, item) => total + item.qty * item.CardData.Price, 0)
 
-  console.log(CardItem);
+  // console.log(CardItem);
   return (
     <>
       <div className={`top-0 right-0 fixed h-full bg-white w-full lg:w-[20vw] p-3 transition-all duration-500 z-50 ${activeCard ? "translate-x-0" : "translate-x-full"}`}>
@@ -35,12 +37,12 @@ function Order() {
         }
 
         <div className='absolute bottom-2'>
-          <h3 className='font-semibold '>Item :</h3>
-          <h3 className='font-semibold mb-3'>Total Amount :</h3>
+          <h3 className='font-semibold '>Item : {itemQty} </h3>
+          <h3 className='font-semibold mb-3'>Total Amount : ₹{priceQty}</h3>
           <button className='w-[90vw] lg:w-[18vw] px-3 py-2 font-bold bg-green-500 hover:bg-gray-200 rounded-lg hover:text-black text-white'> Place Order</button>
         </div>
       </div>
-      <BiSolidCart onClick={() => setActiveCard(true)} className='cursor-pointer fixed bottom-4 right-4 text-5xl rounded-full p-3 shadow-md bg-white' />
+      <BiSolidCart onClick={() => setActiveCard(true)} className={`cursor-pointer fixed bottom-4 right-4 text-5xl rounded-full p-3 shadow-md bg-white ${itemQty > 0 && " animate-bounce delay transition-all"}`} />
     </>
   );
 }
