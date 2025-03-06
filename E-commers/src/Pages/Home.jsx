@@ -12,7 +12,7 @@ function Home() {
       <Order />
       <Navebar />
       <Catogary />
-      {/* <Slider/> */}
+      <Slider/>
       <GlassItem />
     </div>
 

@@ -4,9 +4,12 @@ import { BiSolidCart } from "react-icons/bi";
 import { TbMoodEmpty } from "react-icons/tb";
 import OrderCard from './OrderCard';
 import { useSelector } from 'react-redux';
+import { Navigate, useNavigate } from 'react-router-dom';
+
 
 function Order() {
 
+  const Navigate = useNavigate();
   const CardItem = useSelector((state) => state.card.card);
   const [activeCard, setActiveCard] = useState(false);
   const itemQty = CardItem.reduce((itemQty, item) => itemQty + item.qty, 0)
@@ -39,7 +42,7 @@ function Order() {
         <div className='absolute bottom-2'>
           <h3 className='font-semibold '>Item : {itemQty} </h3>
           <h3 className='font-semibold mb-3'>Total Amount : ₹{priceQty}</h3>
-          <button className='w-[90vw] lg:w-[18vw] px-3 py-2 font-bold bg-green-500 hover:bg-gray-200 rounded-lg hover:text-black text-white'> Place Order</button>
+          <button onClick={()=>Navigate('/success')} className='w-[90vw] lg:w-[18vw] px-3 py-2 font-bold bg-green-500 hover:bg-gray-200 rounded-lg hover:text-black text-white'> Place Order</button>
         </div>
       </div>
       <BiSolidCart onClick={() => setActiveCard(true)} className={`cursor-pointer fixed bottom-4 right-4 text-5xl rounded-full p-3 shadow-md bg-white ${itemQty > 0 && " animate-bounce delay transition-all"}`} />
